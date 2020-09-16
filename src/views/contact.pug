@@ -1,0 +1,26 @@
+html(lang='es')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport',content='width=device-width,initial-scale=1')
+        include includes/header.pug
+        title= title
+    
+    body
+        include includes/navigation.pug
+        .container.p-5
+            .row
+                .col-md-4.offset-md-4
+                    .card.animate__animated.animate__flipInY
+                        .card-header.bg-dark.text-white.text-center
+                            h3 Contáctanos
+                        .card-body
+                            form(action="")
+                                .form-group
+                                    input(type="text", placeholder="Email").form-control
+                                .form-group
+                                    textarea(cols="30", rows="10", placeholder="Mensaje").form-control
+
+                                .form-group
+                                    button.btn.btn-primary.btn-block Enviar Mensaje 
+
+        include includes/footer.pug
