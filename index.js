@@ -6,18 +6,18 @@ const app = express()
 
 //Settings
 app.set('port', 4000)
-app.set('views', path.join(__dirname, "views"))
+app.set('views', path.join(__dirname, "src/views"))
 app.set('view engine', 'pug')
 
 //Middleware
 app.use(morgan('dev'))
 
 //Routes
-app.use(require('./routes'))
+app.use(require('./src/routes'))
 
 
 //static files
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'src/public')))
 
 //listen, activacion del Servidor
 app.listen(app.get('port'), ()=>{
